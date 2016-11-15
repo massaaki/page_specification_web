@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
 
-
 	def index
 		 @words_count = 0
 	end
