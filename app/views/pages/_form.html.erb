@@ -1,0 +1,16 @@
+<%= form_tag("/send", method: "post") do %>
+	<%= csrf_meta_tags %>
+	<div class="contact-inputs">
+	    <div class="group width-30">
+	      <textarea name="message" placeholder="message" required></textarea>
+	    </div>
+
+	    <div class="group">
+	      <input type="text" name="word" placeholder="word">
+	    </div>
+	</div>
+
+	<div class="submit-actions">
+	  <button>Enviar</button>
+	</div>
+<% end %>
