@@ -1,9 +1,16 @@
 
-
-
-
-<%= @contador %>
+<br><br>
 
 
 <%= render 'form'%>
+
+<hr>
+	
+<h4 class="text-center" style="text-decoration: justify">
+	<div class="col-md-8 col-md-offset-2 well">
+		<p class="text-center"><%= flash[:word] if flash[:word]%></p
+			<p class="text-center"><%= flash[:words]%></p>
+		<%= flash[:message]%>
+	</div>
+</h4>
 

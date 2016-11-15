@@ -1,16 +1,22 @@
-<%= form_tag("/send", method: "post") do %>
-	<%= csrf_meta_tags %>
-	<div class="contact-inputs">
-	    <div class="group width-30">
-	      <textarea name="message" placeholder="message" required></textarea>
-	    </div>
 
-	    <div class="group">
-	      <input type="text" name="word" placeholder="word">
-	    </div>
-	</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<%= form_tag("/send_search", method: "post") do %>
+				<%= csrf_meta_tags %>
+				<div class="form-group">				    
+				    <textarea name="message" rows="10" placeholder="Texto (campo obrigatório)" class="form-control" required></textarea>
+				</div>
 
-	<div class="submit-actions">
-	  <button>Enviar</button>
+			    <div class="form-group">
+			    	<input type="text" name="word" class="form-control" placeholder="Busque por uma palavra dentro do texto (opcional)">
+			    </div>
+				
+
+				<div class="submit-actions ">
+				  <button class="btn btn-success btn-block">Buscar</button>
+				</div>
+			<% end %>
+		</div>
 	</div>
-<% end %>
+</div>
